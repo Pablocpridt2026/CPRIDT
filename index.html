@@ -41,7 +41,7 @@
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:3px solid var(--amarillo)}
   .nav{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:72px}
   .nav img{height:52px;width:auto}
-  .nav ul{display:flex;gap:1.8rem;list-style:none}
+  .nav ul{display:flex;gap:1.3rem;list-style:none}
   .nav a{text-decoration:none;font-weight:700;color:var(--azul);padding:.4rem 0;border-bottom:2px solid transparent}
   .nav a:hover{border-bottom-color:var(--amarillo)}
   .menu-btn{display:none;background:none;border:2px solid var(--azul);color:var(--azul);font:700 .95rem 'Lato',sans-serif;padding:.45rem .9rem;border-radius:10px;cursor:pointer}
@@ -106,6 +106,33 @@
   form button:hover{background:var(--negro)}
   .nota{font-size:.9rem;color:var(--gris)}
 
+  /* Noticias, estudiantes, revista y publicaciones */
+  .cabecera{max-width:60ch;margin-bottom:2.4rem}
+  .cabecera p{margin-top:.9rem}
+  .grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem}
+  .card{background:var(--blanco);border-radius:var(--radio);border:1px solid var(--gris-claro);border-bottom:5px solid var(--amarillo);padding:1.6rem;display:flex;flex-direction:column;gap:.6rem}
+  .card .etiqueta{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--azul-medio)}
+  .card h3{font-size:1.2rem;color:var(--azul)}
+  .card.vacia{border-style:dashed;border-bottom-style:dashed;background:var(--amarillo-tenue);justify-content:center;min-height:170px}
+  .estudiantes{background:var(--azul);color:var(--blanco);position:relative;overflow:hidden;isolation:isolate}
+  .estudiantes::before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDkwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VEQkMxRCIgc3Ryb2tlLW9wYWNpdHk9Ii4zMiIgc3Ryb2tlLXdpZHRoPSIxLjQiPjxyZWN0IHg9IjY5Ny44IiB5PSI0MjEuNyIgd2lkdGg9IjIwNS4xIiBoZWlnaHQ9IjE0Mi44IiByeD0iMzkuOCIvPjxyZWN0IHg9IjY1Ny45IiB5PSIzOTIuOCIgd2lkdGg9IjI4MS42IiBoZWlnaHQ9IjIwMi44IiByeD0iNTcuNSIvPjxyZWN0IHg9IjYyMS4wIiB5PSIzNjIuMSIgd2lkdGg9IjM1NC4yIiBoZWlnaHQ9IjI2Ny42IiByeD0iNzUuMyIvPjxyZWN0IHg9IjU4NS40IiB5PSIzMjguMyIgd2lkdGg9IjQyNy4xIiBoZWlnaHQ9IjMzNy4xIiByeD0iOTMuMSIvPjxyZWN0IHg9IjU0OC40IiB5PSIyOTIuNiIgd2lkdGg9IjUwNC4zIiBoZWlnaHQ9IjQwNy42IiByeD0iMTEwLjgiLz48cmVjdCB4PSI1MDguNSIgeT0iMjU3LjYiIHdpZHRoPSI1ODYuNiIgaGVpZ2h0PSI0NzQuNiIgcng9IjEyOC42Ii8+PHJlY3QgeD0iNDY2LjIiIHk9IjIyNS4zIiB3aWR0aD0iNjcwLjkiIGhlaWdodD0iNTM2LjMiIHJ4PSIxNDYuNCIvPjxyZWN0IHg9IjQyNC4wIiB5PSIxOTUuNyIgd2lkdGg9Ijc1Mi41IiBoZWlnaHQ9IjU5NC45IiByeD0iMTY0LjEiLz48cmVjdCB4PSIzODQuMiIgeT0iMTY2LjgiIHdpZHRoPSI4MjkuMCIgaGVpZ2h0PSI2NTQuOSIgcng9IjE4MS45Ii8+PHJlY3QgeD0iMzQ3LjQiIHk9IjEzNi4wIiB3aWR0aD0iOTAxLjUiIGhlaWdodD0iNzE5LjkiIHJ4PSIxOTkuNyIvPjxyZWN0IHg9IjMxMS43IiB5PSIxMDIuMiIgd2lkdGg9Ijk3NC40IiBoZWlnaHQ9Ijc4OS40IiByeD0iMjE3LjQiLz48cmVjdCB4PSIyNzQuNyIgeT0iNjYuNSIgd2lkdGg9IjEwNTEuNyIgaGVpZ2h0PSI4NTkuOSIgcng9IjIzNS4yIi8+PHJlY3QgeD0iMjM0LjciIHk9IjMxLjUiIHdpZHRoPSIxMTM0LjEiIGhlaWdodD0iOTI2LjgiIHJ4PSIyNTIuOSIvPjxyZWN0IHg9IjE5Mi41IiB5PSItMC44IiB3aWR0aD0iMTIxOC40IiBoZWlnaHQ9Ijk4OC40IiByeD0iMjcwLjciLz48cmVjdCB4PSIxNTAuMyIgeT0iLTMwLjMiIHdpZHRoPSIxMzAwLjAiIGhlaWdodD0iMTA0Ny4wIiByeD0iMjg4LjUiLz48cmVjdCB4PSIxMTAuNSIgeT0iLTU5LjIiIHdpZHRoPSIxMzc2LjMiIGhlaWdodD0iMTEwNy4xIiByeD0iMzA2LjIiLz48cmVjdCB4PSI3My43IiB5PSItOTAuMSIgd2lkdGg9IjE0NDguOCIgaGVpZ2h0PSIxMTcyLjEiIHJ4PSIzMjQuMCIvPjxyZWN0IHg9IjM4LjEiIHk9Ii0xMjQuMCIgd2lkdGg9IjE1MjEuNyIgaGVpZ2h0PSIxMjQxLjgiIHJ4PSIzNDEuOCIvPjxyZWN0IHg9IjEuMCIgeT0iLTE1OS43IiB3aWR0aD0iMTU5OS4xIiBoZWlnaHQ9IjEzMTIuMiIgcng9IjM1OS41Ii8+PHJlY3QgeD0iLTM5LjAiIHk9Ii0xOTQuNyIgd2lkdGg9IjE2ODEuNiIgaGVpZ2h0PSIxMzc5LjAiIHJ4PSIzNzcuMyIvPjxyZWN0IHg9Ii04MS4zIiB5PSItMjI2LjgiIHdpZHRoPSIxNzY1LjkiIGhlaWdodD0iMTQ0MC41IiByeD0iMzk1LjEiLz48cmVjdCB4PSItMTIzLjUiIHk9Ii0yNTYuNCIgd2lkdGg9IjE4NDcuNCIgaGVpZ2h0PSIxNDk5LjEiIHJ4PSI0MTIuOCIvPjxyZWN0IHg9Ii0xNjMuMSIgeT0iLTI4NS4zIiB3aWR0aD0iMTkyMy42IiBoZWlnaHQ9IjE1NTkuMiIgcng9IjQzMC42Ii8+PHJlY3QgeD0iLTE5OS45IiB5PSItMzE2LjIiIHdpZHRoPSIxOTk2LjAiIGhlaWdodD0iMTYyNC40IiByeD0iNDQ4LjQiLz48cmVjdCB4PSItMjM1LjYiIHk9Ii0zNTAuMSIgd2lkdGg9IjIwNjkuMSIgaGVpZ2h0PSIxNjk0LjEiIHJ4PSI0NjYuMSIvPjxyZWN0IHg9Ii0yNzIuNyIgeT0iLTM4NS45IiB3aWR0aD0iMjE0Ni42IiBoZWlnaHQ9IjE3NjQuNSIgcng9IjQ4My45Ii8+PHJlY3QgeD0iLTMxMi43IiB5PSItNDIwLjgiIHdpZHRoPSIyMjI5LjEiIGhlaWdodD0iMTgzMS4yIiByeD0iNTAxLjciLz48cmVjdCB4PSItMzU1LjEiIHk9Ii00NTIuOSIgd2lkdGg9IjIzMTMuNCIgaGVpZ2h0PSIxODkyLjYiIHJ4PSI1MTkuNCIvPjxyZWN0IHg9Ii0zOTcuMiIgeT0iLTQ4Mi40IiB3aWR0aD0iMjM5NC44IiBoZWlnaHQ9IjE5NTEuMiIgcng9IjUzNy4yIi8+PHJlY3QgeD0iLTQzNi44IiB5PSItNTExLjMiIHdpZHRoPSIyNDcwLjkiIGhlaWdodD0iMjAxMS40IiByeD0iNTU1LjAiLz48cmVjdCB4PSItNDczLjYiIHk9Ii01NDIuMyIgd2lkdGg9IjI1NDMuMyIgaGVpZ2h0PSIyMDc2LjYiIHJ4PSI1NzIuNyIvPjxyZWN0IHg9Ii01MDkuMiIgeT0iLTU3Ni4zIiB3aWR0aD0iMjYxNi40IiBoZWlnaHQ9IjIxNDYuNCIgcng9IjU5MC41Ii8+PHJlY3QgeD0iLTU0Ni4zIiB5PSItNjEyLjAiIHdpZHRoPSIyNjk0LjAiIGhlaWdodD0iMjIxNi44IiByeD0iNjA4LjIiLz48L2c+PC9zdmc+") center/cover no-repeat;z-index:-1;opacity:.7}
+  .estudiantes h2{color:var(--blanco)}
+  .estudiantes .cabecera p{color:var(--azul-tenue)}
+  .estudiantes .card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-bottom:5px solid var(--amarillo)}
+  .estudiantes .card h3{color:var(--blanco)}
+  .estudiantes .card p{color:var(--azul-tenue)}
+  .estudiantes .card .etiqueta{color:var(--amarillo)}
+  .revista{background:var(--azul-tenue)}
+  .revista-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+  .portada{aspect-ratio:3/4;max-width:300px;width:100%;background:var(--azul);border-radius:12px;border-bottom:6px solid var(--amarillo);display:grid;place-items:center;position:relative;overflow:hidden;isolation:isolate}
+  .portada::before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDkwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VEQkMxRCIgc3Ryb2tlLW9wYWNpdHk9Ii4zMiIgc3Ryb2tlLXdpZHRoPSIxLjQiPjxyZWN0IHg9IjY5Ny44IiB5PSI0MjEuNyIgd2lkdGg9IjIwNS4xIiBoZWlnaHQ9IjE0Mi44IiByeD0iMzkuOCIvPjxyZWN0IHg9IjY1Ny45IiB5PSIzOTIuOCIgd2lkdGg9IjI4MS42IiBoZWlnaHQ9IjIwMi44IiByeD0iNTcuNSIvPjxyZWN0IHg9IjYyMS4wIiB5PSIzNjIuMSIgd2lkdGg9IjM1NC4yIiBoZWlnaHQ9IjI2Ny42IiByeD0iNzUuMyIvPjxyZWN0IHg9IjU4NS40IiB5PSIzMjguMyIgd2lkdGg9IjQyNy4xIiBoZWlnaHQ9IjMzNy4xIiByeD0iOTMuMSIvPjxyZWN0IHg9IjU0OC40IiB5PSIyOTIuNiIgd2lkdGg9IjUwNC4zIiBoZWlnaHQ9IjQwNy42IiByeD0iMTEwLjgiLz48cmVjdCB4PSI1MDguNSIgeT0iMjU3LjYiIHdpZHRoPSI1ODYuNiIgaGVpZ2h0PSI0NzQuNiIgcng9IjEyOC42Ii8+PHJlY3QgeD0iNDY2LjIiIHk9IjIyNS4zIiB3aWR0aD0iNjcwLjkiIGhlaWdodD0iNTM2LjMiIHJ4PSIxNDYuNCIvPjxyZWN0IHg9IjQyNC4wIiB5PSIxOTUuNyIgd2lkdGg9Ijc1Mi41IiBoZWlnaHQ9IjU5NC45IiByeD0iMTY0LjEiLz48cmVjdCB4PSIzODQuMiIgeT0iMTY2LjgiIHdpZHRoPSI4MjkuMCIgaGVpZ2h0PSI2NTQuOSIgcng9IjE4MS45Ii8+PHJlY3QgeD0iMzQ3LjQiIHk9IjEzNi4wIiB3aWR0aD0iOTAxLjUiIGhlaWdodD0iNzE5LjkiIHJ4PSIxOTkuNyIvPjxyZWN0IHg9IjMxMS43IiB5PSIxMDIuMiIgd2lkdGg9Ijk3NC40IiBoZWlnaHQ9Ijc4OS40IiByeD0iMjE3LjQiLz48cmVjdCB4PSIyNzQuNyIgeT0iNjYuNSIgd2lkdGg9IjEwNTEuNyIgaGVpZ2h0PSI4NTkuOSIgcng9IjIzNS4yIi8+PHJlY3QgeD0iMjM0LjciIHk9IjMxLjUiIHdpZHRoPSIxMTM0LjEiIGhlaWdodD0iOTI2LjgiIHJ4PSIyNTIuOSIvPjxyZWN0IHg9IjE5Mi41IiB5PSItMC44IiB3aWR0aD0iMTIxOC40IiBoZWlnaHQ9Ijk4OC40IiByeD0iMjcwLjciLz48cmVjdCB4PSIxNTAuMyIgeT0iLTMwLjMiIHdpZHRoPSIxMzAwLjAiIGhlaWdodD0iMTA0Ny4wIiByeD0iMjg4LjUiLz48cmVjdCB4PSIxMTAuNSIgeT0iLTU5LjIiIHdpZHRoPSIxMzc2LjMiIGhlaWdodD0iMTEwNy4xIiByeD0iMzA2LjIiLz48cmVjdCB4PSI3My43IiB5PSItOTAuMSIgd2lkdGg9IjE0NDguOCIgaGVpZ2h0PSIxMTcyLjEiIHJ4PSIzMjQuMCIvPjxyZWN0IHg9IjM4LjEiIHk9Ii0xMjQuMCIgd2lkdGg9IjE1MjEuNyIgaGVpZ2h0PSIxMjQxLjgiIHJ4PSIzNDEuOCIvPjxyZWN0IHg9IjEuMCIgeT0iLTE1OS43IiB3aWR0aD0iMTU5OS4xIiBoZWlnaHQ9IjEzMTIuMiIgcng9IjM1OS41Ii8+PHJlY3QgeD0iLTM5LjAiIHk9Ii0xOTQuNyIgd2lkdGg9IjE2ODEuNiIgaGVpZ2h0PSIxMzc5LjAiIHJ4PSIzNzcuMyIvPjxyZWN0IHg9Ii04MS4zIiB5PSItMjI2LjgiIHdpZHRoPSIxNzY1LjkiIGhlaWdodD0iMTQ0MC41IiByeD0iMzk1LjEiLz48cmVjdCB4PSItMTIzLjUiIHk9Ii0yNTYuNCIgd2lkdGg9IjE4NDcuNCIgaGVpZ2h0PSIxNDk5LjEiIHJ4PSI0MTIuOCIvPjxyZWN0IHg9Ii0xNjMuMSIgeT0iLTI4NS4zIiB3aWR0aD0iMTkyMy42IiBoZWlnaHQ9IjE1NTkuMiIgcng9IjQzMC42Ii8+PHJlY3QgeD0iLTE5OS45IiB5PSItMzE2LjIiIHdpZHRoPSIxOTk2LjAiIGhlaWdodD0iMTYyNC40IiByeD0iNDQ4LjQiLz48cmVjdCB4PSItMjM1LjYiIHk9Ii0zNTAuMSIgd2lkdGg9IjIwNjkuMSIgaGVpZ2h0PSIxNjk0LjEiIHJ4PSI0NjYuMSIvPjxyZWN0IHg9Ii0yNzIuNyIgeT0iLTM4NS45IiB3aWR0aD0iMjE0Ni42IiBoZWlnaHQ9IjE3NjQuNSIgcng9IjQ4My45Ii8+PHJlY3QgeD0iLTMxMi43IiB5PSItNDIwLjgiIHdpZHRoPSIyMjI5LjEiIGhlaWdodD0iMTgzMS4yIiByeD0iNTAxLjciLz48cmVjdCB4PSItMzU1LjEiIHk9Ii00NTIuOSIgd2lkdGg9IjIzMTMuNCIgaGVpZ2h0PSIxODkyLjYiIHJ4PSI1MTkuNCIvPjxyZWN0IHg9Ii0zOTcuMiIgeT0iLTQ4Mi40IiB3aWR0aD0iMjM5NC44IiBoZWlnaHQ9IjE5NTEuMiIgcng9IjUzNy4yIi8+PHJlY3QgeD0iLTQzNi44IiB5PSItNTExLjMiIHdpZHRoPSIyNDcwLjkiIGhlaWdodD0iMjAxMS40IiByeD0iNTU1LjAiLz48cmVjdCB4PSItNDczLjYiIHk9Ii01NDIuMyIgd2lkdGg9IjI1NDMuMyIgaGVpZ2h0PSIyMDc2LjYiIHJ4PSI1NzIuNyIvPjxyZWN0IHg9Ii01MDkuMiIgeT0iLTU3Ni4zIiB3aWR0aD0iMjYxNi40IiBoZWlnaHQ9IjIxNDYuNCIgcng9IjU5MC41Ii8+PHJlY3QgeD0iLTU0Ni4zIiB5PSItNjEyLjAiIHdpZHRoPSIyNjk0LjAiIGhlaWdodD0iMjIxNi44IiByeD0iNjA4LjIiLz48L2c+PC9zdmc+") center/cover;z-index:-1;opacity:.8}
+  .portada img{width:46%}
+  .estado{display:inline-block;margin-top:1rem;background:var(--amarillo);color:var(--negro);font-weight:700;font-size:.9rem;padding:.35rem .9rem;border-radius:999px}
+  .exito{background:var(--amarillo-tenue);border-left:5px solid var(--amarillo);padding:1rem 1.2rem;border-radius:10px;font-weight:400}
+  .error{background:#fdecea;border-left:5px solid #b3261e;padding:1rem 1.2rem;border-radius:10px;font-weight:400}
+  .oculto{position:absolute;left:-9999px}
+  @media (max-width:860px){.revista-grid{grid-template-columns:1fr}}
+
   /* Pie */
   footer{background:var(--negro);color:var(--gris-claro);padding-block:3rem 2rem}
   .pie{display:grid;grid-template-columns:auto 1fr auto;gap:2rem;align-items:center}
@@ -117,11 +144,13 @@
   .pie a:hover{color:var(--amarillo)}
   .legal{margin-top:2.2rem;padding-top:1.2rem;border-top:3px solid var(--amarillo);font-size:.9rem;color:var(--azul-claro)}
 
-  @media (max-width:860px){
+  @media (max-width:1080px){
     .menu-btn{display:block}
     .nav ul{display:none;position:absolute;top:75px;left:0;right:0;background:var(--blanco);flex-direction:column;gap:0;padding:.5rem 1.25rem 1rem;border-bottom:3px solid var(--amarillo)}
     .nav ul.abierto{display:flex}
     .nav li a{display:block;padding:.8rem 0}
+  }
+  @media (max-width:860px){
     .hero .wrap,.intro,.contacto-grid{grid-template-columns:1fr}
     .hero-escudo{order:-1;justify-self:start}
     .hero-escudo img{width:110px}
@@ -139,6 +168,10 @@
     <ul id="menu">
       <li><a href="#colegio">El Colegio</a></li>
       <li><a href="#mesa-directiva">Mesa directiva</a></li>
+      <li><a href="#noticias">Noticias</a></li>
+      <li><a href="#estudiantes">Estudiantes</a></li>
+      <li><a href="#revista">Revista</a></li>
+      <li><a href="#publicaciones">Publicaciones</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </div>
@@ -183,44 +216,116 @@
         PARA AGREGAR FOTOS Y NOMBRES MÁS ADELANTE:
         1) Sube la foto a la carpeta assets/mesa/ con el nombre indicado en cada tarjeta
            (por ejemplo assets/mesa/presidente.jpg). Aparecerá sola.
-        2) Cambia el texto "Nombre por confirmar" por el nombre real.
+        2) Los nombres ya están escritos en cada tarjeta.
       -->
       <div class="grid-mesa">
         <article class="miembro destacado">
           <div class="foto"><img src="assets/mesa/presidente.jpg" alt="Presidente" onerror="this.remove()"></div>
-          <div class="miembro-info"><h3>Presidente</h3><p class="nombre">Nombre por confirmar</p></div>
+          <div class="miembro-info"><h3>Presidente</h3><p class="nombre">Alvaro Antonio Navarro Lopez</p></div>
         </article>
         <article class="miembro destacado">
           <div class="foto"><img src="assets/mesa/vicepresidente.jpg" alt="Vicepresidente" onerror="this.remove()"></div>
-          <div class="miembro-info"><h3>Vicepresidente</h3><p class="nombre">Nombre por confirmar</p></div>
+          <div class="miembro-info"><h3>Vicepresidente</h3><p class="nombre">Roberto Adrian Zamora Regalado</p></div>
         </article>
         <article class="miembro">
           <div class="foto"><img src="assets/mesa/secretario-general.jpg" alt="Secretario general" onerror="this.remove()"></div>
-          <div class="miembro-info"><h3>Secretario general</h3><p class="nombre">Nombre por confirmar</p></div>
+          <div class="miembro-info"><h3>Secretario general</h3><p class="nombre">Pablo Gonzalez Rivera</p></div>
         </article>
         <article class="miembro">
           <div class="foto"><img src="assets/mesa/tesorero.jpg" alt="Tesorero" onerror="this.remove()"></div>
-          <div class="miembro-info"><h3>Tesorero</h3><p class="nombre">Nombre por confirmar</p></div>
+          <div class="miembro-info"><h3>Tesorero</h3><p class="nombre">Diego Armando Leon Castro</p></div>
         </article>
         <article class="miembro">
           <div class="foto"><img src="assets/mesa/secretario-actas.jpg" alt="Secretario de actas" onerror="this.remove()"></div>
-          <div class="miembro-info"><h3>Secretario de actas</h3><p class="nombre">Nombre por confirmar</p></div>
+          <div class="miembro-info"><h3>Secretario de actas</h3><p class="nombre">Edgardo Peña Landeros</p></div>
         </article>
         <article class="miembro">
           <div class="foto"><img src="assets/mesa/secretario-accion-social.jpg" alt="Secretario de acción social" onerror="this.remove()"></div>
-          <div class="miembro-info"><h3>Secretario de acción social</h3><p class="nombre">Nombre por confirmar</p></div>
+          <div class="miembro-info"><h3>Secretario de acción social</h3><p class="nombre">Daniela de Jesus Hernandez Alcala</p></div>
         </article>
         <article class="miembro">
           <div class="foto"><img src="assets/mesa/secretario-prensa.jpg" alt="Secretario de prensa y propaganda" onerror="this.remove()"></div>
-          <div class="miembro-info"><h3>Secretario de prensa y propaganda</h3><p class="nombre">Nombre por confirmar</p></div>
+          <div class="miembro-info"><h3>Secretario de prensa y propaganda</h3><p class="nombre">Maria Monserrat Ceballos Martinez</p></div>
         </article>
         <article class="miembro">
           <div class="foto"><img src="assets/mesa/coordinador-comites.jpg" alt="Coordinador de comités" onerror="this.remove()"></div>
-          <div class="miembro-info"><h3>Coordinador de comités</h3><p class="nombre">Nombre por confirmar</p></div>
+          <div class="miembro-info"><h3>Coordinador de comités</h3><p class="nombre">Christian David Nuñez Vazquez</p></div>
         </article>
         <article class="miembro">
           <div class="foto"><img src="assets/mesa/secretario-investigacion.jpg" alt="Secretario de investigación y difusión científica" onerror="this.remove()"></div>
-          <div class="miembro-info"><h3>Secretario de investigación y difusión científica</h3><p class="nombre">Nombre por confirmar</p></div>
+          <div class="miembro-info"><h3>Secretario de investigación y difusión científica</h3><p class="nombre">Eduardo Saul Herrera Vazquez</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="noticias" id="noticias">
+    <div class="wrap">
+      <div class="cabecera">
+        <h2>Noticias</h2>
+        <p>Comunicados, eventos y novedades del Colegio y del gremio.</p>
+      </div>
+      <!-- Para agregar una noticia, copia una tarjeta "card" y cambia fecha, título y texto.
+           Cuando haya noticias, borra la tarjeta "vacia". -->
+      <div class="grid-cards">
+        <article class="card vacia">
+          <span class="etiqueta">Próximamente</span>
+          <h3>Aquí publicaremos las noticias del Colegio</h3>
+          <p>Vuelve pronto para conocer comunicados, cursos y eventos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="estudiantes" id="estudiantes">
+    <div class="wrap">
+      <div class="cabecera">
+        <h2>Estudiantes</h2>
+        <p>Un espacio para quienes se están formando en radiología e imagen diagnóstica y terapéutica.</p>
+      </div>
+      <div class="grid-cards">
+        <article class="card">
+          <span class="etiqueta">Próximamente</span>
+          <h3>Convocatorias y actividades</h3>
+          <p>Información de cursos, congresos y eventos para estudiantes.</p>
+        </article>
+        <article class="card">
+          <span class="etiqueta">Próximamente</span>
+          <h3>Recursos de estudio</h3>
+          <p>Materiales y ligas de interés para tu formación profesional.</p>
+        </article>
+        <article class="card">
+          <span class="etiqueta">Próximamente</span>
+          <h3>Únete al Colegio</h3>
+          <p>Información para estudiantes que quieran acercarse al CPRIDT.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="revista" id="revista">
+    <div class="wrap revista-grid">
+      <div class="portada" aria-hidden="true"><img src="data:image/png;base64,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" alt=""></div>
+      <div>
+        <h2>Revista</h2>
+        <p style="margin-top:1rem;max-width:56ch">La revista del Colegio reunirá artículos, casos y novedades de la radiología e imagen diagnóstica y terapéutica.</p>
+        <span class="estado">Próximamente</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="publicaciones" id="publicaciones">
+    <div class="wrap">
+      <div class="cabecera">
+        <h2>Publicaciones</h2>
+        <p>Documentos, investigaciones y materiales de difusión científica del Colegio.</p>
+      </div>
+      <!-- Para agregar una publicación, copia una tarjeta "card" con título, descripción y un enlace al archivo. -->
+      <div class="grid-cards">
+        <article class="card vacia">
+          <span class="etiqueta">Próximamente</span>
+          <h3>Aquí encontrarás nuestras publicaciones</h3>
+          <p>Estamos preparando los primeros materiales.</p>
         </article>
       </div>
     </div>
@@ -235,30 +340,21 @@
             <h3>Correo electrónico</h3>
             <a href="mailto:colegioderadiologia.diagyter@gmail.com">colegioderadiologia.diagyter@gmail.com</a>
           </div>
-          <div class="dato">
-            <h3>Teléfonos</h3>
-            <ul>
-              <li><a href="tel:+523311510180">33 1151 0180</a></li>
-              <li><a href="tel:+523313630321">33 1363 0321</a></li>
-              <li><a href="tel:+523313437289">33 1343 7289</a></li>
-            </ul>
-          </div>
         </div>
 
-        <!-- El formulario abre el correo del visitante con el mensaje ya redactado.
-             Más adelante se puede cambiar por un servicio de formularios. -->
-        <form id="form-contacto" aria-label="Enviar mensaje al Colegio">
+        <form id="form-contacto" aria-label="Enviar mensaje al Colegio" action="https://formsubmit.co/colegioderadiologia.diagyter@gmail.com" method="POST">
+          <input type="text" name="_honey" class="oculto" tabindex="-1" autocomplete="off" aria-hidden="true">
           <label>Nombre
-            <input type="text" name="nombre" autocomplete="name" required>
+            <input type="text" name="name" autocomplete="name" required>
           </label>
           <label>Tu correo
-            <input type="email" name="correo" autocomplete="email" required>
+            <input type="email" name="email" autocomplete="email" required>
           </label>
           <label>Mensaje
-            <textarea name="mensaje" required></textarea>
+            <textarea name="message" required></textarea>
           </label>
           <button type="submit">Enviar mensaje</button>
-          <p class="nota">Al enviar se abrirá tu aplicación de correo con el mensaje listo.</p>
+          <div id="estado-form" role="status" aria-live="polite"></div>
         </form>
       </div>
     </div>
@@ -276,6 +372,10 @@
       <nav class="links" aria-label="Pie de página">
         <a href="#colegio">El Colegio</a>
         <a href="#mesa-directiva">Mesa directiva</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#estudiantes">Estudiantes</a>
+        <a href="#revista">Revista</a>
+        <a href="#publicaciones">Publicaciones</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -295,13 +395,24 @@
   });
   // Año del pie
   document.getElementById('anio').textContent=new Date().getFullYear();
-  // Formulario → correo
-  document.getElementById('form-contacto').addEventListener('submit',function(e){
+  // Formulario de contacto (se envía al correo del Colegio)
+  var form=document.getElementById('form-contacto'),estado=document.getElementById('estado-form');
+  form.addEventListener('submit',function(e){
     e.preventDefault();
-    var f=e.target;
-    var asunto=encodeURIComponent('Mensaje desde el sitio del CPRIDT');
-    var cuerpo=encodeURIComponent('Nombre: '+f.nombre.value+'\nCorreo: '+f.correo.value+'\n\n'+f.mensaje.value);
-    window.location.href='mailto:colegioderadiologia.diagyter@gmail.com?subject='+asunto+'&body='+cuerpo;
+    var boton=form.querySelector('button');
+    boton.disabled=true;boton.textContent='Enviando…';
+    var datos=new FormData(form);
+    var cuerpo={name:datos.get('name'),email:datos.get('email'),message:datos.get('message'),_subject:'Mensaje desde el sitio del CPRIDT',_honey:datos.get('_honey')};
+    fetch('https://formsubmit.co/ajax/colegioderadiologia.diagyter@gmail.com',{
+      method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(cuerpo)
+    }).then(function(r){return r.json();}).then(function(r){
+      if(r.success==='true'||r.success===true){
+        estado.innerHTML='<p class="exito">¡Gracias! Tu mensaje fue enviado. Te responderemos pronto.</p>';
+        form.reset();
+      }else{throw new Error('fallo');}
+    }).catch(function(){
+      estado.innerHTML='<p class="error">No pudimos enviar el mensaje. Escríbenos directamente a <a href="mailto:colegioderadiologia.diagyter@gmail.com">colegioderadiologia.diagyter@gmail.com</a>.</p>';
+    }).finally(function(){boton.disabled=false;boton.textContent='Enviar mensaje';});
   });
 </script>
 </body>
